@@ -1,0 +1,28 @@
+
+/**
+ * Taking Application Instance and Initializing namespace
+ */
+var Embedos = Em.Application.create({
+	ready: function() {
+		alert("EmberJS Ready!");	
+	}
+});
+
+/**
+ * A simple view named MyView
+ */
+Embedos.ListTodoView = Em.View.extend({
+  mouseDown: function() {
+    // ALERTS on CLICK
+    window.alert("hello world!");
+  }
+});
+
+/**
+ * Todo Model - Value Object
+ */
+Embedos.TodoVO = Em.Object.extend({
+	title: null,
+	desc: null,
+	done: false
+});

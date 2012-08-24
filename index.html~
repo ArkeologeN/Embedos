@@ -20,24 +20,11 @@
   <![endif]-->
 </head>
 <body>
+  <!-- If View, then Prints Hello World -->
   <script type="text/x-handlebars">
-    {{view Embedos.TitleTextField placeholder="Todo Title.." valueBinding="Embedos.TodoC.title" }}
-        <button {{action "loadTodos" target="Embedos.TodoC"}}>Go!</button>
- 
-        {{#view Embedos.ListTodoView}}
-            {{#if loader}}
-                <div class="span12 text-center loader">
-                    <br />
-                    loading
-                </div>
-            {{/if}}
-            
-            {{#each Embedos.TodoC}}
-                {{#view Embedos.ListTodoView contentBinding="this"}}
-                    <div><b>{content.title}</b></div>
-                {{/view}}
-            {{/each}}
-        {{/view}}
+    {{#view Embedos.ListTodoView}}
+      <h1>Hello world!</h1>
+    {{/view}}
   </script>
 
   <!-- The missing protocol means that it will match the current protocol, either http or https. If running locally, we use the local jQuery. -->
